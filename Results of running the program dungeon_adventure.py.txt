@@ -8,7 +8,24 @@ What would you like to do?
     3. Check health and inventory
     4. Quit the game
 1
-I am sorry, you are TRAPPED!! You have lost 2 health points :(
+Nice job!!!, you have gained a treasure - ruby!!!
+You are in room number 2
+What would you like to do?
+    1. Search for treasure
+    2. Move to next room
+    3. Check health and inventory
+    4. Quit the game
+5
+Please select option between 1 and 4 only, try again!
+You are in room number 2
+What would you like to do?
+    1. Search for treasure
+    2. Move to next room
+    3. Check health and inventory
+    4. Quit the game
+3
+Your health now is 10
+You have gained ruby so far
 You are in room number 2
 What would you like to do?
     1. Search for treasure
@@ -16,7 +33,7 @@ What would you like to do?
     3. Check health and inventory
     4. Quit the game
 1
-Nice job!!!, you have gained a treasure - ancient scroll!!!
+I am sorry, you are TRAPPED!! You have lost 2 health points :(
 You are in room number 3
 What would you like to do?
     1. Search for treasure
@@ -25,15 +42,24 @@ What would you like to do?
     4. Quit the game
 3
 Your health now is 8
-You have gained ancient scroll so far
+You have gained ruby so far
 You are in room number 3
 What would you like to do?
     1. Search for treasure
     2. Move to next room
     3. Check health and inventory
     4. Quit the game
-2
-You have skipped room number 3
+1
+Nice job!!!, you have gained a treasure - ancient scroll!!!
+You are in room number 4
+What would you like to do?
+    1. Search for treasure
+    2. Move to next room
+    3. Check health and inventory
+    4. Quit the game
+3
+Your health now is 8
+You have gained ruby & ancient scroll so far
 You are in room number 4
 What would you like to do?
     1. Search for treasure
@@ -50,16 +76,16 @@ What would you like to do?
     4. Quit the game
 3
 Your health now is 8
-You have gained ancient scroll & silver ring so far
+You have gained ruby , ancient scroll & silver ring so far
 You are in room number 5
 What would you like to do?
     1. Search for treasure
     2. Move to next room
     3. Check health and inventory
     4. Quit the game
-1
-I am sorry, you are TRAPPED!! You have lost 2 health points :(
-Your final health is 6
-Your total score is 11
-You have gained ancient scroll & silver ring Nice job!!
+2
+You have skipped room number 5
+Your final health is 8
+Your total score is 21
+You have gained ruby , ancient scroll & silver ring Nice job!!
 Game over Hemant! THANK YOU for playing.. see you next time!

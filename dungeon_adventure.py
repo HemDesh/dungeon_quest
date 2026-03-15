@@ -233,8 +233,8 @@ def main():
                 else:
                     print ("Please select option between 1 and 4 only, try again!")
         # TODO: Break or return appropriately when player quits or dies
-            if choice == "4":
-                end_game(player, treasures)
+            if choice == "4" or player["health"] == 0:
+                break
         # TODO: Call end_game() after all rooms are explored
         end_game(player, treasures)
 
