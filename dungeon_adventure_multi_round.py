@@ -1,5 +1,10 @@
 import random
 
+# This program
+# 1. allows players to play multiple rounds
+# 2. tracks high scores across games
+# 3. displays the high score at the end of the game.
+
 def main():
     def setup_player():
         """
@@ -17,6 +22,7 @@ def main():
         """
         # TODO: Ask the user for their name using input()
         print ("Welcome to DUNGEON ADVENTURE!!!")
+        print ("This is a muti round game!!")
         print ("What is your name?")
         player_name = str(input())
         # TODO: Initialize a dictionary with keys: "name", "health", and "inventory"
@@ -57,7 +63,23 @@ def main():
         # TODO: Return the dictionary
         return treasure_names
 
-    def display_options(room_number):
+    def create_all_rounds():
+        all_rounds = []
+        return all_rounds
+    
+    def create_high_score_round():
+        high_score_round = {
+                    "round": 0,
+                    "health": 0,
+                    "score": 0,
+                    "treasure": ""
+                }
+
+        # Return the dictionary
+        return high_score_round
+
+
+    def display_options(room_number, round_number):
         """
         Displays available options for the player in the current room.
 
@@ -73,14 +95,14 @@ def main():
             4. Quit the game
         """
         # TODO: Print the room number and the 4 menu options listed above
-        print (f"You are in room number {room_number}")
+        print (f"Round number {round_number} - room number {room_number}")
         print ("What would you like to do?")
         print ("    1. Search for treasure")
         print ("    2. Move to next room")
         print ("    3. Check health and inventory")
         print ("    4. Quit the game")
 
-    def search_room(player, treasures):
+    def search_room(player, treasures, round_number):
         """
         Simulates searching the current room.
 
@@ -119,7 +141,7 @@ def main():
             print (f"Nice job!!!, you have gained a treasure - {treasure_gained[0]}!!!")
 
 
-    def check_status(player):
+    def check_status(player, round_number):
         """
         Displays the player’s current health and inventory.
 
@@ -134,6 +156,8 @@ def main():
             Inventory: You have no items yet.
         """
         # TODO: Print player health
+        print ("")
+        print (f"Round number {round_number}")
         print (f"Your health now is {player.get("health")}")
         # TODO: If the inventory list is not empty, print items joined by commas
         # print(player)
@@ -155,8 +179,18 @@ def main():
             # TODO: Otherwise print “You have no items yet.”
             print ("You have no items yet.")
 
+    def print_all_round_info(all_rounds):
+        print ("")
+        print ("<------------------------ All Rounds Result So far ---------------------------------->")
+        print ("Round Number  Health  Total Value  Treasures Collected")
+        print ("------------  ------  -----------  ---------------------------------------------------") 
+        for round_data in all_rounds:
+            print (f"     {round_data["round"]}           {round_data["health"]}", end="")
+            print (f"         {round_data["score"]}      {round_data["treasure"]}")
+        print ("------------  ------  -----------  ---------------------------------------------------") 
+        print ("")
 
-    def end_game(player, treasures):
+    def end_round(player, treasures, round_number, all_rounds, high_score_round ):
         """
         Ends the game and displays a summary.
 
@@ -172,30 +206,63 @@ def main():
         for key, value in player["inventory"]:
             total_score += value
         # TODO: Print final health, items, and total value
+        print ("")
+        print (f"Round number {round_number}")
         print (f"Your final health is {player["health"]}")
         count = len(player["inventory"])
+        # Store all treasures gained
+        treasure_gained = ""
         if count > 0:
             print (f"Your total value of treasures is {total_score}")
             print ("You have gained ", end="")
+            # counter to determine "," or "&" 
             counter = 0
             for key, value in player["inventory"]:
                 print (key, end="")
+                treasure_gained += key
                 counter+=1
                 if len(player["inventory"]) > 1:
                     if counter+1 == len(player["inventory"]):
                         print (" & ", end="")
+                        treasure_gained += " & "
                     else:
                         if counter < len(player["inventory"]):
+                            treasure_gained += " , "
                             print (" , ", end ="")
             print (" Nice job!!")
         else:
             print ("Sorry, you did not gain any treasure")
+            treasure_gained = "You did not gain any treasure in this round"
 
+        # Store high_score_round values
+        if total_score > high_score_round["score"]:
+            high_score_round["round"] = round_number
+            high_score_round["health"] = player["health"]
+            high_score_round["score"] = total_score
+            high_score_round["treasure"] = treasure_gained
 
+        # update round information
+        round_dict = {"round":round_number,
+            "health" : player["health"],
+            "score" : total_score,
+            "treasure" : treasure_gained }
+        all_rounds.append(round_dict)
+
+        print_all_round_info(all_rounds)
+               
         # TODO: End with a message like "Game Over! Thanks for playing."
-        print (f"Game over {player["name"]}! THANK YOU for playing.. see you next time!")
+        #print (f"Game over {player["name"]}! THANK YOU for playing.. see you next time!")
 
-    def run_game_loop(player, treasures):
+    def print_high_score_round(high_score_round):
+        print ("")
+        print ("Your highest score round information")
+        print (f"Round number    : {high_score_round["round"]}")
+        print (f"Health          : {high_score_round["health"]}")
+        print (f"Total Value     : {high_score_round["score"]}")
+        print (f"Trasures gained : {high_score_round["treasure"]}")
+        print ("")
+
+    def run_game_loop(player, treasures, all_rounds, high_score_round ):
         """
         Main game loop that manages the rooms and player decisions.
 
@@ -213,42 +280,59 @@ def main():
             - Health below 1 ends the game early.
         """
         # TODO: Loop through 5 rooms (1–5)
-        for i in range(1,6):
-        # TODO: Inside each room, prompt player choice using input()
-            while i > 0:
-                display_options(i)
-                choice = input()
-        # TODO: Use if/elif to handle each choice (1–4)
-                if choice >= "1" and choice <= "4":
-                    if choice == "1":
-                        search_room(player, treasures)
-                        break
-                    elif choice == "2":
-                        print (f"You have skipped room number {i}")
-                        break
-                    elif choice == "3":
-                        check_status(player)
+        round_number = 0
+        while round_number >= 0:
+            round_number +=1
+            for i in range(1,6):
+            # TODO: Inside each room, prompt player choice using input()
+                while i > 0:
+                    display_options(i, round_number)
+                    choice = input().upper().strip()
+            # TODO: Use if/elif to handle each choice (1–4)
+                    if choice >= "1" and choice <= "4":
+                        if choice == "1":
+                            search_room(player, treasures, round_number)
+                            break
+                        elif choice == "2":
+                            print (f"You have skipped room number {i}")
+                            break
+                        elif choice == "3":
+                            check_status(player, round_number)
+                        else:
+                            break
                     else:
-                        break
+                        print ("Please select option between 1 and 4 only, try again!")
+            # TODO: Break or return appropriately when player quits or dies
+                if choice == "4" or player["health"] == 0:
+                    break
+            # TODO: Call end_game() after all rooms are explored
+            end_round(player, treasures, round_number, all_rounds, high_score_round )
+            while round_number >= 0:
+                print ("Do you want to play another round? Type Y for Yes or N for No")
+                next_round = input().upper().strip()
+                if next_round == "Y" or next_round == "N":
+                    break
                 else:
-                    print ("Please select option between 1 and 4 only, try again!")
-        # TODO: Break or return appropriately when player quits or dies
-            if choice == "4" or player["health"] == 0:
-                break
-        # TODO: Call end_game() after all rooms are explored
-        end_game(player, treasures)
+                    print ("Invalid input, please type Y or N only")
+            if next_round == "Y":
+               player["health"] = 10
+               player["inventory"] = []
+            else:
+               # print high score round
+               print_high_score_round(high_score_round)
+               break
+        print (f"Game over {player["name"]}! THANK YOU for playing.. see you next time!")
+        
+
 
     # -----------------------------------------------------
     # GAME ENTRY POINT (Leave this section unchanged)
     # -----------------------------------------------------
     player = setup_player()
     treasures = create_treasures()
-    # search_room(player, treasures)
-    # search_room(player, treasures)
-    # search_room(player, treasures)
-    # check_status(player)
-    # end_game(player, treasures)
-    run_game_loop(player, treasures)
+    all_rounds = create_all_rounds()
+    high_score_round = create_high_score_round()
+    run_game_loop(player, treasures, all_rounds, high_score_round )
 
 if __name__ == "__main__":
     main()

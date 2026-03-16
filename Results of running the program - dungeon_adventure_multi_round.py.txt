@@ -1,0 +1,234 @@
+Welcome to DUNGEON ADVENTURE!!!
+This is a muti round game!!
+What is your name?
+Hemant
+Round number 1 - room number 1
+What would you like to do?
+    1. Search for treasure
+    2. Move to next room
+    3. Check health and inventory
+    4. Quit the game
+1
+I am sorry, you are TRAPPED!! You have lost 2 health points :(
+Round number 1 - room number 2
+What would you like to do?
+    1. Search for treasure
+    2. Move to next room
+    3. Check health and inventory
+    4. Quit the game
+1
+I am sorry, you are TRAPPED!! You have lost 2 health points :(
+Round number 1 - room number 3
+What would you like to do?
+    1. Search for treasure
+    2. Move to next room
+    3. Check health and inventory
+    4. Quit the game
+1
+I am sorry, you are TRAPPED!! You have lost 2 health points :(
+Round number 1 - room number 4
+What would you like to do?
+    1. Search for treasure
+    2. Move to next room
+    3. Check health and inventory
+    4. Quit the game
+1
+I am sorry, you are TRAPPED!! You have lost 2 health points :(
+Round number 1 - room number 5
+What would you like to do?
+    1. Search for treasure
+    2. Move to next room
+    3. Check health and inventory
+    4. Quit the game
+1
+Nice job!!!, you have gained a treasure - ancient scroll!!!
+
+Round number 1
+Your final health is 2
+Your total value of treasures is 7
+You have gained ancient scroll Nice job!!
+
+<------------------------ All Rounds Result So far ---------------------------------->
+Round Number  Health  Total Value  Treasures Collected
+------------  ------  -----------  ---------------------------------------------------
+     1           2         7      ancient scroll
+------------  ------  -----------  ---------------------------------------------------
+
+Do you want to play another round? Type Y for Yes or N for No
+Y
+Round number 2 - room number 1
+What would you like to do?
+    1. Search for treasure
+    2. Move to next room
+    3. Check health and inventory
+    4. Quit the game
+1
+Nice job!!!, you have gained a treasure - ruby!!!
+Round number 2 - room number 2
+What would you like to do?
+    1. Search for treasure
+    2. Move to next room
+    3. Check health and inventory
+    4. Quit the game
+1
+I am sorry, you are TRAPPED!! You have lost 2 health points :(
+Round number 2 - room number 3
+What would you like to do?
+    1. Search for treasure
+    2. Move to next room
+    3. Check health and inventory
+    4. Quit the game
+1
+I am sorry, you are TRAPPED!! You have lost 2 health points :(
+Round number 2 - room number 4
+What would you like to do?
+    1. Search for treasure
+    2. Move to next room
+    3. Check health and inventory
+    4. Quit the game
+1
+I am sorry, you are TRAPPED!! You have lost 2 health points :(
+Round number 2 - room number 5
+What would you like to do?
+    1. Search for treasure
+    2. Move to next room
+    3. Check health and inventory
+    4. Quit the game
+1
+Nice job!!!, you have gained a treasure - ancient scroll!!!
+
+Round number 2
+Your final health is 4
+Your total value of treasures is 17
+You have gained ruby & ancient scroll Nice job!!
+
+<------------------------ All Rounds Result So far ---------------------------------->
+Round Number  Health  Total Value  Treasures Collected
+------------  ------  -----------  ---------------------------------------------------
+     1           2         7      ancient scroll
+     2           4         17      ruby & ancient scroll
+------------  ------  -----------  ---------------------------------------------------
+
+Do you want to play another round? Type Y for Yes or N for No
+Y
+Round number 3 - room number 1
+What would you like to do?
+    1. Search for treasure
+    2. Move to next room
+    3. Check health and inventory
+    4. Quit the game
+1
+Nice job!!!, you have gained a treasure - ruby!!!
+Round number 3 - room number 2
+What would you like to do?
+    1. Search for treasure
+    2. Move to next room
+    3. Check health and inventory
+    4. Quit the game
+1
+I am sorry, you are TRAPPED!! You have lost 2 health points :(
+Round number 3 - room number 3
+What would you like to do?
+    1. Search for treasure
+    2. Move to next room
+    3. Check health and inventory
+    4. Quit the game
+1
+I am sorry, you are TRAPPED!! You have lost 2 health points :(
+Round number 3 - room number 4
+What would you like to do?
+    1. Search for treasure
+    2. Move to next room
+    3. Check health and inventory
+    4. Quit the game
+1
+Nice job!!!, you have gained a treasure - ancient scroll!!!
+Round number 3 - room number 5
+What would you like to do?
+    1. Search for treasure
+    2. Move to next room
+    3. Check health and inventory
+    4. Quit the game
+1
+Nice job!!!, you have gained a treasure - gold coin!!!
+
+Round number 3
+Your final health is 6
+Your total value of treasures is 22
+You have gained ruby , ancient scroll & gold coin Nice job!!
+
+<------------------------ All Rounds Result So far ---------------------------------->
+Round Number  Health  Total Value  Treasures Collected
+------------  ------  -----------  ---------------------------------------------------
+     1           2         7      ancient scroll
+     2           4         17      ruby & ancient scroll
+     3           6         22      ruby , ancient scroll & gold coin
+------------  ------  -----------  ---------------------------------------------------
+
+Do you want to play another round? Type Y for Yes or N for No
+Y
+Round number 4 - room number 1
+What would you like to do?
+    1. Search for treasure
+    2. Move to next room
+    3. Check health and inventory
+    4. Quit the game
+1
+I am sorry, you are TRAPPED!! You have lost 2 health points :(
+Round number 4 - room number 2
+What would you like to do?
+    1. Search for treasure
+    2. Move to next room
+    3. Check health and inventory
+    4. Quit the game
+1
+Nice job!!!, you have gained a treasure - silver ring!!!
+Round number 4 - room number 3
+What would you like to do?
+    1. Search for treasure
+    2. Move to next room
+    3. Check health and inventory
+    4. Quit the game
+1
+Nice job!!!, you have gained a treasure - emerald!!!
+Round number 4 - room number 4
+What would you like to do?
+    1. Search for treasure
+    2. Move to next room
+    3. Check health and inventory
+    4. Quit the game
+1
+Nice job!!!, you have gained a treasure - silver ring!!!
+Round number 4 - room number 5
+What would you like to do?
+    1. Search for treasure
+    2. Move to next room
+    3. Check health and inventory
+    4. Quit the game
+1
+Nice job!!!, you have gained a treasure - silver ring!!!
+
+Round number 4
+Your final health is 8
+Your total value of treasures is 21
+You have gained silver ring , emerald , silver ring & silver ring Nice job!!
+
+<------------------------ All Rounds Result So far ---------------------------------->
+Round Number  Health  Total Value  Treasures Collected
+------------  ------  -----------  ---------------------------------------------------
+     1           2         7      ancient scroll
+     2           4         17      ruby & ancient scroll
+     3           6         22      ruby , ancient scroll & gold coin
+     4           8         21      silver ring , emerald , silver ring & silver ring
+------------  ------  -----------  ---------------------------------------------------
+
+Do you want to play another round? Type Y for Yes or N for No
+N
+
+Your highest score round information
+Round number    : 3
+Health          : 6
+Total Value     : 22
+Trasures gained : ruby , ancient scroll & gold coin
+
+Game over Hemant! THANK YOU for playing.. see you next time!
